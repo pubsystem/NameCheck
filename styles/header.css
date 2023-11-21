@@ -1,0 +1,109 @@
+/* header, tools bar */
+.headerContainer {
+  display: flex;
+  margin: 40px 50px 0 50px;
+  line-height: 70px;
+  justify-content: space-around;
+}
+.siteIconWrapper {
+}
+
+.siteIconWrapper span {
+  font-size: 50px;
+}
+.siteIconWrapper img {
+  display: inline-block;
+  width: 30px;
+}
+
+.navWrapper {
+  font-size: 20px;
+}
+
+.navUl {
+  justify-content: space-around;
+  display: flex;
+  width: 600px;
+}
+.navUl li {
+  cursor: pointer;
+  padding: 5px 5px;
+}
+.navUl li:hover {
+  text-shadow: 0 0 0.65px #000;
+}
+.dropdownIcon {
+  width: 40px;
+  transform: rotate(90deg);
+  position: relative;
+  top: 13px;
+  left: -15px;
+  z-index: -1;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.loginWrapper {
+  line-height: 80px;
+}
+
+.dropbtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown-content p {
+  padding: 0 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content p:hover {
+  background-color: #f1f1f1;
+}
+
+.loginBtn {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.registerBtn {
+  color: #fff;
+  padding: 5px;
+  border-radius: 9px;
+  position: relative;
+  top: -2px;
+  margin-left: 15px;
+}
+
+.registerBtn:hover {
+  background-color: #9a2f38;
+}
+/* header, tools bar end */

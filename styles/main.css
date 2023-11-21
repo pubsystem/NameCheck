@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #38423b;
+  list-style-type: none;
+  /* font-family: "YAFdtQi73Xs 0", _fb_, auto; */
+}
+a {
+  text-decoration: none;
+}
+button {
+  background-color: #691f25;
+  border: none;
+  cursor: pointer;
+}
+/* todo dark mode/ */
