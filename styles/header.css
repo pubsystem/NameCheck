@@ -32,6 +32,18 @@
 .navUl li:hover {
   text-shadow: 0 0 0.65px #000;
 }
+
+.triangle::after {
+  display: block;
+  content: "";
+  border-width: 10px 6px 6px 6px;
+  border-style: solid;
+  border-color: #000000 transparent transparent transparent;
+  position: absolute;
+  left: 74px;
+  top: 45%;
+}
+
 .dropdownIcon {
   width: 40px;
   transform: rotate(90deg);
@@ -54,15 +66,7 @@
 
 .loginWrapper {
   line-height: 80px;
-}
-
-.dropbtn {
-  background-color: #4caf50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+  user-select: none;
 }
 
 .dropdown {
@@ -105,5 +109,47 @@
 
 .registerBtn:hover {
   background-color: #9a2f38;
+}
+#apperanceIconWrapper {
+  margin-left: 20px;
+  display: inline;
+  cursor: pointer;
+  font-size: 20px;
+}
+.ri-sun-fill::before,
+.ri-moon-fill::before {
+  display: inline-block;
+}
+#apperanceIconWrapper:hover .ri-sun-fill::before {
+  animation: spin 5s linear infinite;
+}
+#apperanceIconWrapper:hover .ri-moon-fill::before {
+  animation: swing 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 /* header, tools bar end */

@@ -8,6 +8,23 @@
 a {
   text-decoration: none;
 }
+/* dark mode css */
+.dark {
+  background-color: #222;
+}
+.dark * {
+  color: white !important;
+}
+.dark *::after {
+  border-color: #fff transparent transparent transparent !important;
+}
+.dark .dropdown-content {
+  background-color: #353434;
+}
+.dark .dropdown-content p:hover {
+  background-color: #4e4d4d;
+}
+/* dark mode css end */
 button {
   background-color: #691f25;
   border: none;
