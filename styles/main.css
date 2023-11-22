@@ -30,4 +30,7 @@ button {
   border: none;
   cursor: pointer;
 }
+button:hover {
+  background-color: #9a2f38;
+}
 /* todo dark mode/ */

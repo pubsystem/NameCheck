@@ -1,0 +1,59 @@
+.homePageContent {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px 100px 30px;
+}
+.inputContainer {
+  max-width: 50%;
+}
+.homePageLogo {
+  max-width: 500px;
+  height: auto;
+  position: relative;
+  left: -70px;
+}
+.homePageDesc {
+  margin-left: 50px;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.inputWrapper {
+  margin-top: 50px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.nameInput {
+  padding-left: 20px;
+  height: 46px;
+  font-size: 26px;
+  max-width: 37%;
+  border-radius: 15px;
+  border: 1px solid #afafaf;
+}
+
+.nameInput::placeholder {
+  color: #afacac;
+  font-weight: 100;
+  opacity: 1; /* Firefox */
+}
+
+.checkBtn {
+  color: #fff;
+  height: 50px;
+  padding: 5px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+}
+.mapImgWrapper {
+  width: 50%;
+}
+.worldImg {
+  z-index: -1;
+  transform: scale(1.25);
+  position: relative;
+  left: -80px;
+  top: 100px;
+  width: 100%;
+}

@@ -1,9 +1,9 @@
 /* header, tools bar */
 .headerContainer {
   display: flex;
-  margin: 40px 50px 0 50px;
+  margin: 40px 70px 0 70px;
   line-height: 70px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .siteIconWrapper {
 }
@@ -13,7 +13,9 @@
 }
 .siteIconWrapper img {
   display: inline-block;
-  width: 30px;
+  width: 100px;
+  position: relative;
+  top: 14px;
 }
 
 .navWrapper {
@@ -107,9 +109,6 @@
   margin-left: 15px;
 }
 
-.registerBtn:hover {
-  background-color: #9a2f38;
-}
 #appearanceIconWrapper {
   margin-left: 20px;
   display: inline;
