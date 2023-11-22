@@ -1,13 +1,13 @@
-// to get user info here & set userApperance
+// to get user info here & set userAppearance
 
 let bodyDom = document.getElementById("nameCkeckBody");
-let apperanceIconDom = document.getElementById("apperanceIconWrapper");
-const sunIcon = `<i class="ri-sun-fill" onClick="changeApperance('light')"></i>`;
-const moonIcon = `<i class="ri-moon-fill" onClick="changeApperance('dark')"></i>`;
+let appearanceIconDom = document.getElementById("appearanceIconWrapper");
+const sunIcon = `<i class="ri-sun-fill" onClick="changeAppearance('light')"></i>`;
+const moonIcon = `<i class="ri-moon-fill" onClick="changeAppearance('dark')"></i>`;
 
 addEventListener("load", (event) => {
   // todo login feature
-  setUserApperance();
+  setUserAppearance();
 });
 // get localStorage
 const getLocalStorage = (key = "user", type = "String") => {
@@ -23,37 +23,37 @@ const getLocalStorage = (key = "user", type = "String") => {
 const setLocalStorage = (key, value) => {
   localStorage.setItem(key, value);
 };
-// set Apperance & icon
-const setUserApperance = () => {
+// set Appearance & icon
+const setUserAppearance = () => {
   /*Depends on whether logged in. If logged in, read the user's configuration. 
-      ( maybe like :{name: 'xxx', id: '123', apperanceMode: 'dark', ...})
-    If not logged in, read the local Apperance configuration.
+      ( maybe like :{name: 'xxx', id: '123', appearanceMode: 'dark', ...})
+    If not logged in, read the local Appearance configuration.
   */
   let userInfo = getLocalStorage("user", "Object");
-  let curApperance;
+  let curAppearance;
   if (userInfo) {
-    curApperance = userInfo.apperanceMode;
+    curAppearance = userInfo.appearanceMode;
   } else {
-    curApperance = getLocalStorage("apperanceMode");
+    curAppearance = getLocalStorage("appearanceMode");
   }
-  if (curApperance === "dark") {
+  if (curAppearance === "dark") {
     bodyDom.classList.add("dark");
-    apperanceIconDom.innerHTML = sunIcon;
+    appearanceIconDom.innerHTML = sunIcon;
   } else {
     bodyDom.classList.remove("dark");
-    apperanceIconDom.innerHTML = moonIcon;
+    appearanceIconDom.innerHTML = moonIcon;
   }
 };
 
-// set apperance Localstorage
-const changeApperance = (mode = "dark") => {
+// set appearance Localstorage
+const changeAppearance = (mode = "dark") => {
   let userInfo = getLocalStorage("user", "Object");
-  // if login, update apperance in userinfo. Else save directly
+  // if login, update appearance in userinfo. Else save directly
   if (userInfo) {
-    setLocalStorage("user", { ...userInfo, apperanceMode: mode });
-    setUserApperance();
+    setLocalStorage("user", { ...userInfo, appearanceMode: mode });
+    setUserAppearance();
   } else {
-    setLocalStorage("apperanceMode", mode);
-    setUserApperance();
+    setLocalStorage("appearanceMode", mode);
+    setUserAppearance();
   }
 };
