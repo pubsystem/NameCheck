@@ -1,7 +1,7 @@
 /* header, tools bar */
 .headerContainer {
   display: flex;
-  margin: 40px 70px 0 70px;
+  margin: 20px 70px 0 70px;
   line-height: 70px;
   justify-content: space-between;
 }

@@ -38,7 +38,6 @@
             <p>Link 3</p>
           </div>
         </li>
-
       </ul>
     </div>
     <div class="loginWrapper">
@@ -56,11 +55,10 @@
       <p class="homePageDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at risus at lacus sagittis
         aliquet.</p>
 
-
-      <form action="">
+      <form action="#" name="nameOrigin" method="get" id="nameOrigin">
         <div class="inputWrapper">
-          <input class="nameInput" type="text" placeholder="FIRST NAME">
-          <input class="nameInput" type="text" placeholder="LAST NAME">
+          <input class="nameInput" type="text" placeholder="FIRST NAME" id="firstNameInput" name="firstName">
+          <input class="nameInput" type="text" placeholder="LAST NAME" id="lastNameInput" name="lastName">
           <button class="checkBtn" id="checkOriginBtn">CHECK</button>
         </div>
       </form>
@@ -71,11 +69,18 @@
   </section>
 
 
+  <!-- using the same model. depends on the different btn which open the model, call the different api get the data then generate html code append to model-->
+
   <div id="nameOriginModal" class="modal">
-    <div class="modal-content">
+    <div class="modal-content" id="modalContent">
       <!-- <span class="close">&times;</span> -->
-      <p>Some text in the Modal..</p>
+      <!-- modalContent.innerHTML here  -->
+
     </div>
+  </div>
+  <div id="messageAlert" class="messageAlert">
+    <i class="ri-error-warning-line"></i>
+    <span id="messageAlertText"></span>
   </div>
 
   <script src="../js/initialize.js"></script>

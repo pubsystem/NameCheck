@@ -34,3 +34,43 @@ button:hover {
   background-color: #9a2f38;
 }
 /* todo dark mode/ */
+
+.inputAlert {
+  border: 1px solid red !important;
+}
+
+.messageAlert {
+  display: none;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  text-align: center;
+  top: 100px;
+  max-width: 250px;
+  padding: 10px;
+  /* border: 1px solid #565656; */
+  border-radius: 10px;
+  z-index: 9;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+}
+.messageAlertAnimation {
+  display: block;
+  animation-name: messageAlert;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+.messageAlert i {
+  color: red;
+}
+@keyframes messageAlert {
+  0% {
+    top: -30px;
+  }
+  100% {
+    top: 100px;
+  }
+}
