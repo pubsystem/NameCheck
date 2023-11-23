@@ -1,18 +1,37 @@
 // Get the modal
 const modal = document.getElementById("nameOriginModal"),
+  modalContent = document.getElementById("modalContent"),
   nameOriginForm = document.getElementById("nameOrigin"),
   firstNameInput = document.getElementById("firstNameInput"),
   lastNameInput = document.getElementById("lastNameInput"),
   // Get the button that opens the modal
   originCheckBtn = document.getElementById("checkOriginBtn"),
-  messageAlert = document.getElementById("messageAlert");
-messageAlertText = document.getElementById("messageAlertText");
+  messageAlert = document.getElementById("messageAlert"),
+  messageAlertText = document.getElementById("messageAlertText"),
+  predictAgeBtn = document.getElementById("predictAgeBtn"),
+  similarNameBtn = document.getElementById("similarNameBtn"),
+  randomNameBtn = document.getElementById("randomNameBtn");
 
 // Get the <span> element that closes the modal
 let spanOrigin = document.getElementsByClassName("close")[0];
 // open model after form Validate
-const openModel = () => {
-  modal.style.display = "block";
+const openModel = (type) => {
+  switch (type) {
+    case "randomName":
+      // append corresponding form item in model before open it
+      // modalContent.innerHTML = `todo`
+      modal.style.display = "block";
+      break;
+    case "similarName":
+      modal.style.display = "block";
+      break;
+    case "predictAge":
+      modal.style.display = "block";
+      break;
+    default:
+      modal.style.display = "block";
+      break;
+  }
 };
 //
 firstNameInput.addEventListener(
@@ -25,12 +44,17 @@ lastNameInput.addEventListener(
   (event) => formValidate(event, "nameOrigin", false, false),
   false
 );
-// when click nameOrigin btn
+// when click tools btn
 originCheckBtn.addEventListener(
   "click",
   (event) => formValidate(event, "nameOrigin"),
   false
 );
+// this three are different logic with the main tools
+// i think we should open model first and render the corresponding form in it
+randomNameBtn.addEventListener("click", () => openModel("randomName"), false);
+similarNameBtn.addEventListener("click", () => openModel("similarName"), false);
+predictAgeBtn.addEventListener("click", () => openModel("predictAge"), false);
 
 //  formValidate & call api function
 const formValidate = (
@@ -60,7 +84,6 @@ const formValidate = (
       } else {
         lastNameInput.classList.remove("inputAlert");
       }
-
       if ((!firstName || !lastName) && needAlert) {
         formItemAlert(alertEle, alertType);
         return false;
@@ -71,14 +94,13 @@ const formValidate = (
           // fetchData(type)
         }
       }
-
       // todo form item required alert
       break;
     case "similarName":
       break;
     case "randomName":
       break;
-    case "agePridect":
+    case "predictAge":
       break;
     default:
       break;

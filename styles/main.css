@@ -3,6 +3,8 @@
   padding: 0;
   color: #38423b;
   list-style-type: none;
+  font-family: sans-serif !important;
+  font-weight: 300;
   /* font-family: "YAFdtQi73Xs 0", _fb_, auto; */
 }
 a {
@@ -37,6 +39,9 @@ button:hover {
 
 .inputAlert {
   border: 1px solid red !important;
+}
+.pageActived a {
+  font-weight: 500;
 }
 
 .messageAlert {
