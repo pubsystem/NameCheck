@@ -1,11 +1,14 @@
 .homePageContent {
+  height: calc(100vh - 187px);
   display: flex;
   justify-content: space-between;
   margin: 0 30px 100px 30px;
 }
 .inputContainer {
+  margin-top: 80px;
   max-width: 50%;
 }
+
 .homePageLogo {
   max-width: 500px;
   height: auto;
@@ -28,7 +31,7 @@
   padding-left: 20px;
   height: 46px;
   font-size: 26px;
-  max-width: 37%;
+  max-width: 33%;
   border-radius: 15px;
   border: 1px solid #afafaf;
 }
@@ -42,12 +45,13 @@
 .checkBtn {
   color: #fff;
   height: 50px;
-  padding: 5px 20px;
+  padding: 5px 30px;
   border-radius: 30px;
   font-size: 18px;
 }
 .mapImgWrapper {
   width: 50%;
+  position: relative;
 }
 .worldImg {
   z-index: -1;
@@ -58,8 +62,69 @@
   width: 100%;
 }
 
-/* model popup  start*/
+/* other tools section start */
+.otherToolSection {
+  height: 100vh;
+  background-image: url("../images/half-globe.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: #38423a;
+}
 
+.otherToolTitle {
+  color: #fff;
+  text-align: center;
+  font-size: 38px;
+  padding-top: 80px;
+  margin-bottom: 80px;
+}
+.otherToolsContainer {
+  display: flex;
+  justify-content: space-around;
+}
+.otherToolsItem {
+  border: 1px solid #fff;
+  height: 50vh;
+  width: 22vw;
+  background-color: #38423a;
+  position: relative;
+  border-radius: 10px;
+}
+
+.otherToolsItem h3 {
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  margin: 30px;
+}
+.otherToolsItem p {
+  text-align: center;
+  color: #fff;
+  margin: 30px;
+  font-size: 20px;
+  line-height: 1.3em;
+}
+.otherToolTryWrapper {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.otherToolTryBtn {
+  background-color: #ffbf00;
+  font-weight: bold;
+  width: 66%;
+  padding: 10px;
+  border-radius: 10px;
+}
+.otherToolTryBtn:hover {
+  background-color: #ffea00;
+}
+/* other tools section end */
+
+/* model popup  start*/
 /* The Modal (background) */
 .modal {
   display: none;
@@ -102,3 +167,33 @@
 }
 
 /* model popup  end*/
+
+/* about us start */
+.aboutUsContainer {
+  max-width: 50%;
+  margin-left: 50px;
+  margin-top: 80px;
+}
+.aboutUsContainer article {
+  width: 80%;
+  font-size: 18px;
+}
+.aboutUsImg {
+  z-index: -1;
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  width: 55%;
+}
+.aboutUsTitle {
+  margin-bottom: 40px;
+  font-size: 50px;
+}
+.aboutUsParagraph {
+  margin-top: 40px;
+}
+
+.aboutUsContent {
+  height: calc(100vh - 293px);
+}
+/* about us end */
