@@ -1,0 +1,28 @@
+.aboutUsContent {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.aboutUsImage {
+    display: flex;
+    justify-content: center;
+}
+
+.imageAbout {
+    margin: 50px;
+    width: 40%;
+}
+
+.aboutUsTitle h1 {
+    font-size: 72px;
+    font-family: 'Cardo';
+}
+
+.aboutUsText {
+    padding: 50px 100px;
+}
+
+.aboutUsParagraph p {
+    margin-top: 20px;
+    font-size: 25px;
+}
