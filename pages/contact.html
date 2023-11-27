@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Arthur Duarte; Ning Lu; Shuwen Wu; Xiaorui Xie">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/contact.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../images/logo(1).png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Montserrat&display=swap" rel="stylesheet">
+    <title>About Us | Name Check</title>
+</head>
+
+<body class="dark" id="nameCkeckBody">
+    <header class="headerContainer">
+        <div class="siteIconWrapper">
+            <img src="../images/logo(1).png" alt="head logo">
+        </div>
+        <div class="navWrapper">
+            <ul class="navUl">
+                <li class="pageActived"><a href="./home.html">HOME</a></li>
+                <li><a href="./about-us.html">ABOUT US</a></li>
+                <li>CONTACT</li>
+                <li class="dropdown triangle">
+                    TOOLS
+                    <div class="dropdown-content">
+                        <p>Link 1</p>
+                        <p>Link 2</p>
+                        <p>Link 3</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="loginWrapper">
+            <a class="loginBtn">LOGIN</a>
+            <button class="registerBtn">REGISTER</button>
+            <div id="appearanceIconWrapper"></div>
+        </div>
+    </header>
+
+    <section class="contactPageContent">
+        <div class="contactForm">
+            <h1>Send us a message</h1>
+            <form action="">
+                <div class="contactPersonInfo">
+                    <input type="text" id="contactName" placeholder="Your name:*">
+                    <input type="text" id="contactEmail" placeholder="Your email:">
+                </div>
+                <div class="contactPersonMessage">
+                    <textarea id="contactSubject" placeholder="Write your message here:"></textarea>
+                </div>
+                <div class="contactButton">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+    <footer class="footerontainer">
+        <div class="siteIconWrapper">
+            <img src="../images/logo(1).png" alt="head logo">
+            <span class="footerIconWrapper"><i class="ri-instagram-line"></i>
+                <i class="ri-mail-line"></i></span>
+
+        </div>
+        <div class="navWrapper ">
+            <ul class="navUl footerNav">
+                <li><a href="./home.html">HOME</a></li>
+                <li><a href="./aboutUs.html">ABOUT US</a></li>
+                <li><a href="">CONTACT</a></li>
+                <!-- I removed tools here -->
+            </ul>
+        </div>
+    </footer>
+
+
+    <!-- using the same model. depends on the different btn which open the model, call the different api get the data then generate html code append to model-->
+
+    <div id="nameOriginModal" class="modal">
+        <div class="modal-content" id="modalContent">
+            <!-- <span class="close">&times;</span> -->
+            <!-- modalContent.innerHTML here  -->
+
+        </div>
+    </div>
+    <div id="messageAlert" class="messageAlert">
+        <i class="ri-error-warning-line"></i>
+        <span id="messageAlertText"></span>
+    </div>
+
+    <script src="../js/initialize.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>
