@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Arthur Duarte; Ning Lu; Shuwen Wu; Xiaorui Xie">
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/home.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="../images/logo(1).png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Montserrat&display=swap" rel="stylesheet">
+  <title>Home | Name Check</title>
+</head>
+
+<body class="dark" id="nameCkeckBody">
+  <header class="headerContainer">
+    <div class="siteIconWrapper">
+      <img src="../images/logo(1).png" alt="head logo">
+    </div>
+    <div class="navWrapper">
+      <ul class="navUl">
+        <li class="pageActived"><a href="./home.html">HOME</a></li>
+        <li><a href="./aboutUs.html">ABOUT US</a></li>
+        <li><a href="./contact.html">CONTACT</a></li>
+        <li class="dropdown triangle">
+          TOOLS
+          <div class="dropdown-content">
+            <p>Link 1</p>
+            <p>Link 2</p>
+            <p>Link 3</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="loginWrapper">
+      <!-- <a class="loginBtn">LOGIN</a>
+      <button class="registerBtn">REGISTER</button> -->
+      <div id="appearanceIconWrapper"></div>
+    </div>
+  </header>
+  <section class="homePageContent">
+    <div class="inputContainer">
+      <div>
+        <img src="../images/logo.png" alt="logo" class="homePageLogo">
+      </div>
+
+      <p class="homePageDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at risus at lacus sagittis
+        aliquet.</p>
+
+      <form action="#" name="nameOrigin" method="get" id="nameOrigin">
+        <div class="inputWrapper">
+          <input class="nameInput" type="text" placeholder="FIRST NAME" id="firstNameInput" name="firstName">
+          <input class="nameInput" type="text" placeholder="LAST NAME" id="lastNameInput" name="lastName">
+          <button class="checkBtn" id="checkOriginBtn">CHECK</button>
+        </div>
+      </form>
+    </div>
+    <div class="mapImgWrapper">
+      <img src="../images/world-map.png" alt="world" class="worldImg">
+    </div>
+  </section>
+  <section class="otherToolSection">
+    <h2 class="otherToolTitle">OTHER TOOLS</h2>
+    <div class="otherToolsContainer">
+      <div class="otherToolsItem">
+        <h3>RANDOM NAME</h3>
+        <p>placeholder todo this is some discription placeholder this is some discription</p>
+        <div class="otherToolTryWrapper">
+          <button id="randomNameBtn" class="otherToolTryBtn">TRY IT</button>
+        </div>
+      </div>
+      <div class="otherToolsItem">
+        <h3>PREDICT AGE</h3>
+        <p>placeholder todo this is some discription placeholder this is some discription</p>
+        <div class="otherToolTryWrapper">
+          <button id="predictAgeBtn" class="otherToolTryBtn">TRY IT</button>
+        </div>
+      </div>
+      <div class="otherToolsItem">
+        <h3>SIMILAR NAME</h3>
+        <p>placeholder todo this is some discription placeholder this is some discription</p>
+        <div class="otherToolTryWrapper">
+          <button id="similarNameBtn" class="otherToolTryBtn">TRY IT</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <footer class="footerontainer">
+    <div class="siteIconWrapper">
+      <img src="../images/logo(1).png" alt="head logo">
+      <span class="footerIconWrapper"><i class="ri-instagram-line"></i>
+        <i class="ri-mail-line"></i></span>
+
+    </div>
+    <div class="navWrapper ">
+      <ul class="navUl footerNav">
+        <li><a href="./home.html">HOME</a></li>
+        <li><a href="./about-us.html">ABOUT US</a></li>
+        <li><a href="./contact">CONTACT</a></li>
+        <!-- I removed tools here -->
+      </ul>
+    </div>
+  </footer>
+
+
+  <!-- using the same model. depends on the different btn which open the model, call the different api get the data then generate html code append to model-->
+
+  <div id="nameOriginModal" class="modal">
+    <div class="modal-content" id="modalContent">
+      <!-- <span class="close">&times;</span> -->
+      <!-- modalContent.innerHTML here  -->
+      <div class="fullNameContainer">
+        <div class="fullNameItem">
+          <h1>Firstname</h1>
+          <h1>Lastname</h1>
+        </div>
+      </div>
+      <div class="nameInfoContainer">
+        <div class="nameInfoItem">
+          <h3>Country of Origin:</h3>
+          <img src="" alt="">
+          <p>Country</p>
+        </div>
+        <div class="nameInfoItem">
+          <h3>Region of Origin:</h3>
+          <img src="" alt="">
+          <p>Region</p>
+        </div>
+        <div class="nameInfoItem">
+          <h3>Alternative Country of Origin:</h3>
+          <img src="" alt="">
+          <p>Country</p>
+        </div>
+        <div class="nameInfoItem">
+          <h3>Script:</h3>
+          <img src="" alt="">
+          <p>Script</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="messageAlert" class="messageAlert">
+    <i class="ri-error-warning-line"></i>
+    <span id="messageAlertText"></span>
+  </div>
+
+  <script src="../js/initialize.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+.contactPageContent {
+    display: flex;
+    justify-content: center;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.contactForm h1 {
+    margin-bottom: 25px;
+    font-family: 'Cardo';
+    font-size: 72px;
+}
+
+.contactPersonMessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 25px
+}
+
+.contactPersonInfo {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.contactPersonInfo input,
+.contactPersonMessage textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contactSubject {
+    height: 200px
+}
+
+.contactButton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px
+}
+
+.contactButton input {
+    padding: 10px 60px;
+    background-color: #691F25;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.contactButton input:hover {
+    background-color: #9a2f38;
+}
