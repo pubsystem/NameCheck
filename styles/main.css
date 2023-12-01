@@ -8,6 +8,12 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.dark input,
+.dark #displayFirstName,
+.dark #displayLastName {
+  color: rgb(56, 66, 59) !important;
+}
+
 a {
   text-decoration: none;
 }

@@ -307,6 +307,7 @@
 }
 #randomNameText {
   font-size: 32px;
+  color: rgb(56, 66, 59) !important;
 }
 #randomNameForm h2 {
   margin: 20px 0 10px 0;
