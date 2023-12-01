@@ -149,7 +149,6 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -189,22 +188,33 @@
 
 .fullNameItem h1 {
   font-size: 82px;
-  font-family: 'Cardo', serif;
+  font-family: "Cardo", serif;
 }
 
 .nameInfoItem {
   margin: 0 auto;
+  text-align: center;
 }
 
 .nameInfoItem h3 {
   font-size: 32px;
   color: #fff;
-  margin-top: 50px
+  margin-top: 50px;
 }
 
 .nameInfoItem p {
   color: #fff;
   text-align: center;
+}
+
+.nameInfoItem img {
+  margin-top: 20px;
+  width: 200px;
+}
+
+#scriptImg {
+  width: 20%;
+  margin-left: 20px;
 }
 
 /* The Close Button */
@@ -258,3 +268,51 @@
 }
 
 /* about us end */
+
+/* random name */
+.randomNameFormContainer {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  height: 50%;
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#randomNameForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+#randomNameForm > div {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+#randomNameForm h2 {
+  margin: 20px 0;
+}
+#randomNameForm select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+#randomNameSubmit {
+  padding: 10px;
+  background-color: #691f25;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
