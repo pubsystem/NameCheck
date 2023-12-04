@@ -10,10 +10,15 @@
 
 .dark input,
 .dark #displayFirstName,
-.dark #displayLastName {
+.dark #displayLastName,
+.dark .sp_Result,
+.dark .sp_Result span,
+.dark #messageAlertText {
   color: rgb(56, 66, 59) !important;
 }
-
+.dark .ri-error-warning-line {
+  color: red !important;
+}
 a {
   text-decoration: none;
 }

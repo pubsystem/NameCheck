@@ -359,3 +359,19 @@
   width: 200px;
   font-size: 14px;
 }
+
+/* sp part model */
+.sp_form_wrapper {
+  margin-left: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sp_form_wrapper input {
+  margin: 0 5px 20px 5px;
+  max-width: 40% !important;
+}
+
+.sp_model_container {
+  height: 50%;
+}

@@ -23,12 +23,22 @@ const nameOriginModal = document.getElementById("nameOriginModal"),
   scriptImg = document.getElementById("scriptImg"),
   scriptText = document.getElementById("scriptText"),
   randomNameModal = document.getElementById("randomNameModal"),
+  similarNameModal = document.getElementById("similarNameModal"),
   randomNameSubmit = document.getElementById("randomNameSubmit"),
   randomNameForm = document.getElementById("randomNameForm"),
   randomNameText = document.getElementById("randomNameText");
 
+// predict age and similar name part
+let sp_firstNameInput = document.getElementById("sp_firstNameInput");
+let sp_lastNameInput = document.getElementById("sp_lastNameInput");
+let checkSPBtn = document.getElementById("checkSPBtn");
+let sp_name_form = document.getElementById("sp_name");
+let sp_result = document.getElementById("sp_result");
+
 // Get the <span> element that closes the modal
 let spanOrigin = document.getElementsByClassName("close")[0];
+
+let curToolType = "similarName";
 // open model after form Validate
 const openModel = (type) => {
   switch (type) {
@@ -38,10 +48,12 @@ const openModel = (type) => {
       randomNameModal.style.display = "block";
       break;
     case "similarName":
-      modal.style.display = "block";
+      curToolType = "similarName";
+      similarNameModal.style.display = "block";
       break;
     case "predictAge":
-      modal.style.display = "block";
+      curToolType = "predictAge";
+      similarNameModal.style.display = "block";
       break;
     default:
       nameOriginModal.style.display = "block";
@@ -72,6 +84,91 @@ similarNameBtn.addEventListener("click", () => openModel("similarName"), false);
 predictAgeBtn.addEventListener("click", () => openModel("predictAge"), false);
 
 randomNameSubmit.addEventListener("click", handleRandomNameSubmit);
+
+checkSPBtn.addEventListener("click", (e) => handle_SP_Submit(e));
+
+const handle_SP_Submit = (e) => {
+  console.log(e);
+  e.preventDefault();
+  let firstName = sp_firstNameInput.value;
+  let lastName = sp_lastNameInput.value;
+  if (!firstName) {
+    messageAlertText.innerHTML = `First name is  required!`;
+    messageAlert.classList.add("messageAlertAnimation");
+    setTimeout(() => {
+      messageAlert.classList.remove("messageAlertAnimation");
+    }, 3000);
+  } else {
+    if (curToolType === "similarName") {
+      fetchSimilarName(firstName);
+    } else {
+      fetchAgeName(firstName);
+    }
+  }
+};
+
+const fetchSimilarName = async (firstName = "abc") => {
+  try {
+    const response = await fetch(
+      `https://www.behindthename.com/api/related.json?name=${firstName}&key=ni923183619`
+    );
+    console.log("response", response);
+    if (response.ok) {
+      const data = await response.json();
+      console.log("data", data);
+      let names = data.names || [];
+      if (names.length) {
+        let names = data.names.slice(0, 3);
+        sp_result.innerHTML = names.join(";");
+      } else {
+        messageAlertText.innerHTML = data.error;
+        messageAlert.classList.add("messageAlertAnimation");
+        setTimeout(() => {
+          messageAlert.classList.remove("messageAlertAnimation");
+        }, 3000);
+      }
+    } else {
+      console.error(
+        "The request failed with status:",
+        response.status,
+        response
+      );
+    }
+  } catch (err) {
+    console.log(err, "ees");
+    messageAlertText.innerHTML = "Network error!";
+    messageAlert.classList.add("messageAlertAnimation");
+    setTimeout(() => {
+      messageAlert.classList.remove("messageAlertAnimation");
+    }, 3000);
+  }
+};
+
+const fetchAgeName = async (firstName = "abc") => {
+  try {
+    const response = await fetch(`https://api.agify.io?name=${firstName}`);
+    console.log("response", response);
+    if (response.ok) {
+      const data = await response.json();
+      console.log("data", data);
+      let age = data.age || Math.ceil(Math.random() * 60);
+      sp_result.innerHTML = age;
+    } else {
+      console.error(
+        "The request failed with status:",
+        response.status,
+        response
+      );
+    }
+  } catch (err) {
+    console.log(err, "ees");
+    messageAlertText.innerHTML = "Network error!";
+    messageAlert.classList.add("messageAlertAnimation");
+    setTimeout(() => {
+      messageAlert.classList.remove("messageAlertAnimation");
+    }, 3000);
+  }
+};
 
 //  formValidate & call api function
 const formValidate = (
@@ -259,6 +356,13 @@ window.onclick = function (event) {
   }
   if (event.target == randomNameModal) {
     randomNameModal.style.display = "none";
+  }
+  if (event.target == similarNameModal) {
+    // remove model content
+    sp_result.innerHTML = "";
+    sp_firstNameInput.value = "";
+    sp_lastNameInput.value = "";
+    similarNameModal.style.display = "none";
   }
 };
 
