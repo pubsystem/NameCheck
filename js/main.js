@@ -151,7 +151,6 @@ async function getNameOrigin(firstName, lastName) {
       "src",
       `https://flagcdn.com/256x192/${countryOrigin.toLowerCase()}.png`
     );
-
     countryOriginText.innerText = regionNamesInEnglish.of(countryOrigin);
     regionOriginText.innerText = regionOrigin;
     switch (regionOrigin) {
@@ -209,21 +208,30 @@ async function handleRandomNameSubmit(e) {
     ifGender = "&gender=f";
   }
   let country = randomNameForm.elements["country"].value;
-  const response = await fetch(
-    `https://api.parser.name/?api_key=93d471ea85d1937e713e8aafffb32090&endpoint=generate&country_code=${country}${ifGender}`
-  );
-
-  if (response.ok) {
-    const data = await response.json();
-    console.log(data);
-    let name = data["data"][0]["name"];
-    console.log(name);
-    let fullName = `${name.firstname.name} ${name.lastname.name}`;
-    console.log(fullName);
-    randomNameText.innerText = fullName;
-    randomNameSubmit.innerText = "GET NEW NAME";
-  } else {
-    console.error("The request failed with status:", response.status, response);
+  try {
+    const response = await fetch(
+      `https://api.parser.name/?api_key=93d471ea85d1937e713e8aafffb32090&endpoint=generate&country_code=${country}${ifGender}`
+    );
+    // console.log("response", response);
+    if (response.ok) {
+      const data = await response.json();
+      let name = data["data"][0]["name"];
+      let fullName = `${name.firstname.name} ${name.lastname.name}`;
+      randomNameText.innerText = fullName;
+      randomNameSubmit.innerText = "GET NEW NAME";
+    } else {
+      console.error(
+        "The request failed with status:",
+        response.status,
+        response
+      );
+    }
+  } catch (err) {
+    messageAlertText.innerHTML = "Please choice another country!";
+    messageAlert.classList.add("messageAlertAnimation");
+    setTimeout(() => {
+      messageAlert.classList.remove("messageAlertAnimation");
+    }, 3000);
   }
 }
 
