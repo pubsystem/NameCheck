@@ -130,3 +130,98 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+// predict age
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toolButtons = document.querySelectorAll(".otherToolTryBtn");
+  toolButtons.forEach((button) => {
+    button.addEventListener("click", handleToolButtonClick);
+  });
+
+  const closeButtons = document.querySelectorAll(".close");
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", closeModal);
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target.className === "modal") {
+      closeModal();
+    }
+  });
+});
+
+function handleToolButtonClick(event) {
+  const buttonId = event.target.id;
+  switch (buttonId) {
+    case "predictAgeBtn":
+      setModalContentForPredictAge();
+      break;
+    case "randomNameBtn":
+      break;
+    case "similarNameBtn":
+      break;
+  }
+}
+
+function setModalContentForPredictAge() {
+  const modal = document.getElementById("predictAgeModal");
+  const modalContent = document.getElementById("modalContentPredictAge");
+  modalContent.innerHTML = `
+    <div id="predictAgeForm">
+          <h1>Firstname</h1>
+          <h1>Lastname</h1>
+        </div>
+
+        <div class="ageInfoContainer">
+          <h3>Predict Age:</h3>
+          <img src="" alt="" />
+        </div>
+  `;
+
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  const modals = document.querySelectorAll(".modal");
+  modals.forEach((modal) => {
+    modal.style.display = "none";
+  });
+}
+//similar name
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = "block";
+  }
+}
+
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("otherToolTryBtn")) {
+    const buttonId = event.target.id;
+
+    switch (buttonId) {
+      case "predictAgeBtn":
+        openModal("predictAgeModal");
+        break;
+      case "similarNameBtn":
+        openModal("similarNamesModal");
+        break;
+    }
+  }
+});
+
+function setupModalClose() {
+  const modals = document.querySelectorAll(".modal");
+  modals.forEach((modal) => {
+    modal.addEventListener("click", function (event) {
+      if (event.target.classList.contains("close") || event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  setupModalClose();
+});

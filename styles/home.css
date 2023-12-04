@@ -189,7 +189,7 @@
 
 .fullNameItem h1 {
   font-size: 82px;
-  font-family: 'Cardo', serif;
+  font-family: "Cardo", serif;
 }
 
 .nameInfoItem {
@@ -199,7 +199,7 @@
 .nameInfoItem h3 {
   font-size: 32px;
   color: #fff;
-  margin-top: 50px
+  margin-top: 50px;
 }
 
 .nameInfoItem p {
@@ -258,3 +258,157 @@
 }
 
 /* about us end */
+
+/* predict age */
+#tools2Modal.tools2 .fullNameContainer {
+  background-color: #336699;
+  color: #fff;
+}
+
+#tools2Modal.tools2 .fullNameItem h1 {
+  font-size: 42px;
+}
+
+#tools2Modal.tools2 .predictedAgeContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  background-color: #336699;
+  border-radius: 50px;
+}
+
+#tools2Modal.tools2 .predictedAgeItem h3 {
+  font-size: 28px;
+  color: #fff;
+}
+
+#tools2Modal.tools2 .predictedAgeItem p {
+  color: #fff;
+  text-align: center;
+}
+#predictAgeForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#predictAgeForm h1 {
+  font-size: 82px;
+  font-family: "Cardo", serif;
+}
+#predictAgeModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#modalContentPredictAge {
+  width: 60%;
+  height: 60%;
+}
+#modalContentPredictAge h3 {
+  font-size: 32px;
+  color: #fff;
+  margin-top: 50px;
+  text-align: center;
+}
+.ageInfoContainer {
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  background-color: #38423a;
+  border-radius: 50px;
+}
+
+/* Similar Names Modal Styles */
+#similarNamesModal .modal-content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 20px;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 50px;
+}
+
+#similarNamesModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.similarNamesContainer {
+  border-radius: 50px;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.similarNamesContainer h1 {
+  font-size: 82px;
+  font-family: "Cardo", serif;
+  margin-bottom: 20px;
+}
+
+.similarNamesContainer h2 {
+  font-size: 32px;
+  margin-top: 50px;
+}
+
+#similarNamesList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#similarNamesList li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#modalContentSimilarNames {
+  width: 60%;
+  height: 60%;
+}
+#similarNamesList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.similarNameInfoContainer {
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  background-color: #38423a;
+  border-radius: 50px;
+}
+.similarNameInfoContainer h2 {
+  font-size: 32px;
+  color: #fff;
+  margin-top: 50px;
+  text-align: center;
+}
