@@ -4,6 +4,8 @@
 
 let bodyDom = document.getElementById("nameCkeckBody");
 let appearanceIconDom = document.getElementById("appearanceIconWrapper");
+let headerLogo = document.getElementById("headerLogo");
+let mainPageLogo = document.getElementById("mainPageLogo");
 const sunIcon = `<i class="ri-sun-fill" onClick="changeAppearance('light')"></i>`;
 const moonIcon = `<i class="ri-moon-fill" onClick="changeAppearance('dark')"></i>`;
 
@@ -41,9 +43,13 @@ const setUserAppearance = () => {
   if (curAppearance === "dark") {
     bodyDom.classList.add("dark");
     appearanceIconDom.innerHTML = sunIcon;
+    headerLogo.src = "../images/logo(1)-white.png";
+    mainPageLogo.src = "../images/logo-white.png";
   } else {
     bodyDom.classList.remove("dark");
     appearanceIconDom.innerHTML = moonIcon;
+    headerLogo.src = "../images/logo(1).png";
+    mainPageLogo.src = "../images/logo.png";
   }
 };
 
