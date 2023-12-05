@@ -7,6 +7,9 @@
   font-weight: 300;
   font-family: "Montserrat", sans-serif;
 }
+.dark .contactButton input {
+  color: #fff !important;
+}
 
 .dark input,
 .dark #displayFirstName,
@@ -16,6 +19,10 @@
 .dark #messageAlertText {
   color: rgb(56, 66, 59) !important;
 }
+.dark option {
+  color: #fff !important;
+}
+
 .dark .ri-error-warning-line {
   color: red !important;
 }
