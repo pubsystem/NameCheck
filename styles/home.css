@@ -202,14 +202,17 @@
   color: #fff;
   margin-top: 30px;
 }
+
 #countryOriginText {
   margin-top: 20px;
 }
+
 .nameInfoItem p {
   font-size: 22px;
   color: #fff;
   text-align: center;
 }
+
 #scriptText {
   margin-top: 20px;
 }
@@ -245,7 +248,7 @@
 .aboutUsContainer {
   max-width: 50%;
   margin-left: 50px;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .aboutUsContainer article {
@@ -262,11 +265,13 @@
 }
 
 .aboutUsTitle {
+  font-family: 'Cardo', serif;
   margin-bottom: 40px;
   font-size: 50px;
 }
 
 .aboutUsParagraph {
+  font-size: 20px;
   margin-top: 40px;
 }
 
@@ -300,18 +305,21 @@
   gap: 30px;
 }
 
-#randomNameForm > div {
+#randomNameForm>div {
   display: flex;
   gap: 24px;
   justify-content: space-between;
 }
+
 #randomNameText {
   font-size: 32px;
   color: rgb(56, 66, 59) !important;
 }
+
 #randomNameForm h2 {
   margin: 20px 0 10px 0;
 }
+
 #randomNameForm select {
   padding: 10px;
   margin-bottom: 20px;
@@ -332,6 +340,7 @@
 .afterSelect {
   position: relative;
 }
+
 .afterSelect:after {
   content: "▼";
   font-size: 10px;

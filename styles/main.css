@@ -19,13 +19,15 @@
 .dark #messageAlertText {
   color: rgb(56, 66, 59) !important;
 }
-.dark option {
+
+option {
   color: #fff !important;
 }
 
 .dark .ri-error-warning-line {
   color: red !important;
 }
+
 a {
   text-decoration: none;
 }
