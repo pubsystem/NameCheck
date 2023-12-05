@@ -87,6 +87,7 @@ randomNameSubmit.addEventListener("click", handleRandomNameSubmit);
 
 checkSPBtn.addEventListener("click", (e) => handle_SP_Submit(e));
 
+// Eden
 const handle_SP_Submit = (e) => {
   console.log(e);
   e.preventDefault();
@@ -107,6 +108,7 @@ const handle_SP_Submit = (e) => {
   }
 };
 
+// Eden
 const fetchSimilarName = async (firstName = "abc") => {
   try {
     const response = await fetch(
@@ -144,6 +146,7 @@ const fetchSimilarName = async (firstName = "abc") => {
   }
 };
 
+// Eden
 const fetchAgeName = async (firstName = "abc") => {
   try {
     const response = await fetch(`https://api.agify.io?name=${firstName}`);
@@ -170,7 +173,7 @@ const fetchAgeName = async (firstName = "abc") => {
   }
 };
 
-//  formValidate & call api function
+//  formValidate & call api function --- Shuwen Wu
 const formValidate = (
   e,
   type = "nameOrigin",
@@ -222,6 +225,7 @@ const formValidate = (
   }
 };
 
+// Shuwen Wu
 async function getNameOrigin(firstName, lastName) {
   const response = await fetch(
     `https://v2.namsor.com/NamSorAPIv2/api2/json/origin/${firstName}/${lastName}`,
@@ -292,7 +296,7 @@ async function getNameOrigin(firstName, lastName) {
   }
 }
 
-//Random Name Generator
+//Random Name Generator --- Shuwen Wu
 async function handleRandomNameSubmit(e) {
   e.preventDefault();
   let gender = randomNameForm.elements["gender"].value;
@@ -324,7 +328,7 @@ async function handleRandomNameSubmit(e) {
       );
     }
   } catch (err) {
-    messageAlertText.innerHTML = "Please choice another country!";
+    messageAlertText.innerHTML = "Please choose another country!";
     messageAlert.classList.add("messageAlertAnimation");
     setTimeout(() => {
       messageAlert.classList.remove("messageAlertAnimation");
@@ -332,6 +336,7 @@ async function handleRandomNameSubmit(e) {
   }
 }
 
+// Ning
 const formItemAlert = (eles = [], types) => {
   console.log(eles, types);
   eles.map((ele) => {
@@ -349,7 +354,7 @@ const formItemAlert = (eles = [], types) => {
 //   modal.style.display = "none";
 // };
 
-// When the user clicks anywhere outside of the modal, close it
+// When the user clicks anywhere outside of the modal, close it --- Eden
 window.onclick = function (event) {
   if (event.target == nameOriginModal) {
     nameOriginModal.style.display = "none";
@@ -366,7 +371,7 @@ window.onclick = function (event) {
   }
 };
 
-//Display countries dropdown
+//Display countries dropdown --- Shuwen Wu
 async function populateCountries() {
   try {
     const response = await fetch("https://restcountries.com/v3.1/all");
