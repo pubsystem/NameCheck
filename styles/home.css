@@ -411,8 +411,7 @@
     display: none;
   }
 
-  footer .navWrapper {
-    visibility: collapse;
+  .homePageDesc {
+    text-align: center;
   }
-
 }
