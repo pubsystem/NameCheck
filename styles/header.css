@@ -212,7 +212,7 @@
 }
 
 .footerNavUl li a {
-  color: white
+  color: white;
 }
 
 .footerNavUl li:hover {
@@ -222,7 +222,14 @@
 /* footer end */
 
 @media screen and (max-width: 600px) {
-
+  .footerontainer_C_A {
+    position: fixed;
+    bottom: 0;
+    width: -webkit-fill-available;
+  }
+  .aboutUsContainer {
+    max-width: 100% !important;
+  }
   /* .headerContainer {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -273,5 +280,4 @@
   .footerIconWrapper {
     text-align: center;
   }
-
 }

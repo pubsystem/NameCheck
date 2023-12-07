@@ -7,6 +7,11 @@
   font-weight: 300;
   font-family: "Montserrat", sans-serif;
 }
+html {
+  width: fit-content;
+  height: fit-content;
+}
+
 .dark .contactButton input {
   color: #fff !important;
 }
