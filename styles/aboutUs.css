@@ -1,0 +1,39 @@
+.aboutUsContainer {
+    max-width: 50%;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.aboutUsContainer article {
+    width: 80%;
+    font-size: 18px;
+}
+
+.aboutUsImg {
+    z-index: -1;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    width: 55%;
+}
+
+.aboutUsTitle {
+    font-family: 'Cardo', serif;
+    margin-bottom: 40px;
+    font-size: 50px;
+}
+
+.aboutUsParagraph {
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.aboutUsContent {
+    height: calc(100vh - 293px);
+}
+
+@media screen and (max-width: 600px) {
+    .aboutUsImg {
+        display: none;
+    }
+}
